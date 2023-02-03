@@ -1,0 +1,19 @@
+<p>Nombre del empleado: {{nombre}}</p>
+<p>Apellido del empleado: {{apellido}}</p>
+<p>Edad del empleado: {{getEdad()<18 ? "Menor de edad": "Mayor de edad"}} </p>
+<p>Empresa del empleado: {{empresa.value}}</p>
+
+<h1>Introduce la empresa: <input type="text" #empresa (keyup)="0" [disabled]="habilitacionCuadro"> </h1>
+
+<br>
+<br>
+
+<!-- <input type="button" value="Dale!" (click)="llamaEmpresa(empresa.value)"> -->
+
+{{textoDeRegistro}}
+
+<br>
+
+<h1>Registrado <input type="radio" value="si" name="registro" [checked]="usuRegistrado" (click)="setUsuarioRegistrado($event)"></h1>
+
+<h1>No registrado <input type="radio" value="no"  name="registro" (click)="setUsuarioRegistrado($event)"></h1>
