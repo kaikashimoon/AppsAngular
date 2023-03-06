@@ -1,0 +1,33 @@
+<div class="container">
+   <h1 style="text-align: center;">{{title}}</h1>
+
+
+   <form>
+    <p>Nombre</p>
+    <input type="text" name="nombre" [(ngModel)]="nombre">
+
+    <br>
+    <br>
+    <p>Apellido</p>
+    <input type="text" name="apellido" [(ngModel)]="apellido">
+
+    <br>
+    <br>
+
+    <input type="submit" value="Registrar" (click)="registrarUsuario()">
+
+   </form>
+
+   <br>
+
+   <p *ngIf="registrado">{{mensaje}}</p>
+   
+
+   <ng-template>
+
+      <p>Nadie registrado</p>
+
+   </ng-template>
+
+
+</div>
